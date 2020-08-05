@@ -1,5 +1,5 @@
 import subprocess
-res = subprocess.Popen("dir",shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+res = subprocess.Popen("psql -h 10.20.2.60 -p 1921 -U lisbase -d lisdb -f c:\doc\1.sql",shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 err = res.stderr.read()
 
 if err:
